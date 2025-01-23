@@ -29,10 +29,9 @@
 #     dest: /usr/share/nginx/html
 #     remote_src: yes
 - name: copy expence conf 
-  ansible.builtin.copy:
+  ansible.builtin.template:
     src: expense.conf.j2
     dest: /etc/nginx/default.d/expense.conf
-- name: Restart Nginx
-  ansible.builtin.service:
-    state: restarted
-    name: nginx
+  notify:
+  - Restart Nginx
+ 
