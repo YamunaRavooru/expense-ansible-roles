@@ -1,5 +1,3 @@
-- name:
-  tasks:
   - name: Install mysql libraries
     ansible.builtin.pip:
       name: PyMySQL
