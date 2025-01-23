@@ -22,11 +22,11 @@
     dest: /tmp/frontend.zip
 - name: unzip the frontend code
   ansible.builtin.unarchive:
-      src: /tmp/frontend.zip
-      dest: /usr/share/nginx/html
-      remote_src: yes
+    src: /tmp/frontend.zip
+    dest: /usr/share/nginx/html
+    remote_src: yes
 - name: copy expence conf 
-  ansible.builtin.template:
+  ansible.builtin.copy:
     src: expense.conf.j2
     dest: /etc/nginx/default.d/expense.conf
 - name: Restart Nginx
