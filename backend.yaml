@@ -1,5 +1,5 @@
-- name: configuring backend-server
-  hosts: app
+- name: configuring frontend-server
+  hosts: web
   become: yes
   roles:
-  - backend
+  - frontend
