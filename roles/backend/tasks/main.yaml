@@ -28,8 +28,8 @@
   #     dest: /app
   #     remote_src: yes
   - name: include from common roles
-    tags:
-    - deployment
+    # tags:
+    # - deployment
     include_role:
       name: common
       tasks_from: main
