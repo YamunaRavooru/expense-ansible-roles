@@ -27,6 +27,10 @@
   #     src: /tmp/backend.zip
   #     dest: /app
   #     remote_src: yes
+  - name: include from common roles
+    include_role:
+      name: common
+      tasks_from: main
   - name: Install dependencies
     community.general.npm:
       path: /app
