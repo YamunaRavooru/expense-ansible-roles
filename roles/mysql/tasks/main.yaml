@@ -19,7 +19,7 @@
     community.mysql.mysql_info:
       login_user: root
       login_password: "{{ mysql_root_password }}"
-      login_host: mysql.daws82s.cloud
+      login_host: "{{mysql_host }}"
     register: mysql_result
     ignore_errors: true
   - name: print the result
